@@ -86,7 +86,7 @@
         <div v-if="settings.lastCount && lastCount">Last count for <span v-html="locationtitle"></span> recorded at: {{lastCount}}</div>
         <form @submit.prevent="addToCount(countNumber)">
           <div v-if="Object.keys(activityGroups).length > 0" class="activityGroups">
-            <div v-for="(value, key) in activityGroups" v-bind:key="key" class="activityGroup" v-bind:class="{required: value.required, activityGroupSingleRow: value.activities.length >= 10}">
+            <div v-for="(value, key) in activityGroups" v-bind:key="key" class="activityGroup" v-bind:class="{required: value.required}">
               <h3 class="activityTitle">
                 <span v-html="value.title"></span>
                 <span v-if="value.required" class="requiredicon">*</span>
